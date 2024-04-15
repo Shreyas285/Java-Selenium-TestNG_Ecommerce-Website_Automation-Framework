@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-15T23:22:22 IST" name="Default suite" finished-at="2024-04-15T23:22:34 IST" duration-ms="11990">
+    <groups>
+    </groups>
+    <test started-at="2024-04-15T23:22:22 IST" name="Default test" finished-at="2024-04-15T23:22:34 IST" duration-ms="11990">
+      <class name="ecommerce_automation.E2E_testframework.Tests.End2End_Test">
+        <test-method signature="end2endTest()[pri:0, instance:ecommerce_automation.E2E_testframework.Tests.End2End_Test@6f8f9349]" started-at="2024-04-15T23:22:22 IST" name="end2endTest" finished-at="2024-04-15T23:22:34 IST" duration-ms="11922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end2endTest -->
+      </class> <!-- ecommerce_automation.E2E_testframework.Tests.End2End_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
