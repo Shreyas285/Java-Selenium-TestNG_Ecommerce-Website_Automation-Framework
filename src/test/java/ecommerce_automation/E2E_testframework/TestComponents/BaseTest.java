@@ -26,13 +26,15 @@ public class BaseTest {
 			System.setProperty("webdriver.chrome.driver",
 					"C:/Users/Lenovo/Documents/chromedriver-win64/chromedriver.exe");
 			driver = new ChromeDriver();
+			
 		} else if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.chrome.driver",
-					"C:/Users/Lenovo/Documents/chromedriver-win64/chromedriver.exe");
+			System.setProperty("webdriver.gecko.driver", 
+					"C:/Users/Lenovo/Documents/geckodriver-v0.34.0-win64/geckodriver.exe");
 			driver = new FirefoxDriver();
+			
 		} else if (browser.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.chrome.driver",
-					"C:/Users/Lenovo/Documents/chromedriver-win64/chromedriver.exe");
+			System.setProperty("webdriver.edge.driver", 
+					"C:/Users/Lenovo/Documents/edgedriver_win64/msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
 		driver.manage().window().maximize();
@@ -47,7 +49,7 @@ public class BaseTest {
 		LandingPage landingPage = new LandingPage(driver);
 		return landingPage;
 	}
-	
+
 	public void closeBrowser() {
 		driver.quit();
 	}
