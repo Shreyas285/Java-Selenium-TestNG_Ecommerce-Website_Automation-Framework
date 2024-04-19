@@ -63,7 +63,7 @@ public class LandingPage extends AbstractComponents {
 	WebElement Login;
 
 	By LoginMessage = By.xpath("//div[@aria-label='Login Successfully']");
-	
+
 	By LogoutMessage = By.xpath("//div[@aria-label='Logout Successfully']");
 
 	public void accountCreation(String firstname, String lastname, String email, String phonenumber, String password,
@@ -79,7 +79,7 @@ public class LandingPage extends AbstractComponents {
 		AgeVerify.click();
 		Register.click();
 	}
-	
+
 	public void signInAccount() {
 		SignIn.click();
 	}
@@ -103,7 +103,7 @@ public class LandingPage extends AbstractComponents {
 		waitForElementToDisappear(LoginMessage);
 		return getLoginMessage;
 	}
-	
+
 	public String getLogoutMessage() {
 		waitForElementToAppear(LogoutMessage);
 		String getLogoutMessage = driver.findElement(LogoutMessage).getText();

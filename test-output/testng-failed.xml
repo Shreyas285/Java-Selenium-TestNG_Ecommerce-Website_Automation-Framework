@@ -5,7 +5,7 @@
     <classes>
       <class name="ecommerce_automation.E2E_testframework.Tests.End2End_Test">
         <methods>
-          <include name="end2endTest"/>
+          <include name="end2endTest" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- ecommerce_automation.E2E_testframework.Tests.End2End_Test -->
     </classes>
