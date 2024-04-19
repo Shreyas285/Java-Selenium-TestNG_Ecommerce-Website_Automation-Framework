@@ -66,6 +66,26 @@ public class LandingPage extends AbstractComponents {
 
 	By LogoutMessage = By.xpath("//div[@aria-label='Logout Successfully']");
 
+	@FindBy(xpath = "//div[@class='row mb-2'][4]/div[2]/div")
+	WebElement PasswordMismatch;
+
+	By PasswordMismatchError = By.xpath("//div[@class='row mb-2'][4]/div[2]/div");
+
+	@FindBy(xpath = "//div[@class='toast-bottom-right toast-container']")
+	WebElement ExistingEmailid;
+
+	By ExistingEmailidError = By.xpath("//div[@class='toast-bottom-right toast-container']");
+
+	@FindBy(xpath = "//p[@class='login-wrapper-footer-text']")
+	WebElement HaveAccount;
+
+	By EmailField = By.id("userEmail");
+
+	@FindBy(xpath = "//div[@class='toast-bottom-right toast-container']")
+	WebElement InvalidCredential;
+
+	By InvalidCredentialError = By.xpath("//div[@class='toast-bottom-right toast-container']");
+
 	public void accountCreation(String firstname, String lastname, String email, String phonenumber, String password,
 			String confirmpassword) {
 		RegisterButton.click();
@@ -77,6 +97,11 @@ public class LandingPage extends AbstractComponents {
 		Password.sendKeys(password);
 		ConfirmPassword.sendKeys(confirmpassword);
 		AgeVerify.click();
+		Register.click();
+	}
+
+	public void accountCreation() {
+		RegisterButton.click();
 		Register.click();
 	}
 
@@ -109,5 +134,32 @@ public class LandingPage extends AbstractComponents {
 		String getLogoutMessage = driver.findElement(LogoutMessage).getText();
 		waitForElementToDisappear(LogoutMessage);
 		return getLogoutMessage;
+	}
+
+	public String getPasswordMismatchErrorMessage() {
+		waitForElementToAppear(PasswordMismatchError);
+		String PasswordMismatchErrorMessage = PasswordMismatch.getText();
+		return PasswordMismatchErrorMessage;
+	}
+
+	public String getExistingEmailidErrorMessage() {
+		waitForElementToAppear(ExistingEmailidError);
+		String ExistingEmailidErrorMessage = ExistingEmailid.getText();
+		waitForElementToDisappear(ExistingEmailidError);
+		return ExistingEmailidErrorMessage;
+	}
+
+	public void goToLoginPage() throws InterruptedException {
+		ConfirmPassword.clear();
+		ConfirmPassword.sendKeys("Shreyas23@");
+		Thread.sleep(1000);
+		HaveAccount.click();
+	}
+
+	public String getInvalidCredentialErrorMessage() {
+		waitForElementToAppear(InvalidCredentialError);
+		String InvalidCredentialErrorMessage = ExistingEmailid.getText();
+		waitForElementToDisappear(InvalidCredentialError);
+		return InvalidCredentialErrorMessage;
 	}
 }

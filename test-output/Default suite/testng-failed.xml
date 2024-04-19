@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ecommerce_automation.E2E_testframework.Tests.End2End_Test">
+      <class name="ecommerce_automation.E2E_testframework.Tests.SanityTest">
         <methods>
-          <include name="end2endTest" invocation-numbers="0 1"/>
+          <include name="sanityTest" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="launchApplication"/>
         </methods>
-      </class> <!-- ecommerce_automation.E2E_testframework.Tests.End2End_Test -->
+      </class> <!-- ecommerce_automation.E2E_testframework.Tests.SanityTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
