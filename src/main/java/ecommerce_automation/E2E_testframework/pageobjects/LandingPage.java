@@ -151,7 +151,7 @@ public class LandingPage extends AbstractComponents {
 
 	public void goToLoginPage() throws InterruptedException {
 		ConfirmPassword.clear();
-		ConfirmPassword.sendKeys("Shreyas23@");
+		ConfirmPassword.sendKeys("Shreyas31@");
 		Thread.sleep(1000);
 		HaveAccount.click();
 	}
