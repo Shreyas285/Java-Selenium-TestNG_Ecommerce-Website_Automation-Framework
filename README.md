@@ -1,2 +1,2 @@
-# Java-Selenium-TestNG_Ecommerce-Website_Automation-Framework
-Java + Selenium WebDriver + TestNG Framework
+# Java-Selenium-TestNG Ecommerce-Website Regression-Automation-Framework
+Java + Maven + Selenium WebDriver + TestNG Framework
